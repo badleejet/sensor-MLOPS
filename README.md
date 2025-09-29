@@ -124,23 +124,23 @@ am = ambient.Ambient(
 
 #### モード1: 学習とアップロード (推奨)
 ```bash
-python MLops_training_tflite_uploadM5.py --mode both --ip 192.168.1.XXX
+python mlops_training_tflite.py --mode both --ip 192.168.1.XXX
 ```
 
 #### モード2: 学習のみ
 ```bash
-python MLops_training_tflite_uploadM5.py --mode train
+python mlops_training_tflite.py --mode train
 ```
 
 #### モード3: アップロードのみ
 ```bash
-python MLops_training_tflite_uploadM5.py --mode upload --ip 192.168.1.XXX
+python mlops_training_tflite.py --mode upload --ip 192.168.1.XXX
 ```
 
 #### 定期実行の設定
 ```bash
 # 毎日午前3時に自動学習・アップロード
-python MLops_training_tflite_uploadM5.py --mode both --ip 192.168.1.XXX --time 03:00
+python mlops_training_tflite.py --mode both --ip 192.168.1.XXX --time 03:00
 ```
 
 ### 3. オプション
@@ -178,7 +178,7 @@ http://192.168.1.XXX/upload
 ├── config.h                   # 認証情報 (gitignore対象)
 ├── config.h.example           # 設定ファイルのテンプレート
 ├── model.h                    # 初期モデルデータ
-├── MLops_training_tflite_uploadM5.py  # 学習・アップロードスクリプト
+├── mlops_training_tflite.py  # 学習・アップロードスクリプト
 ├── models/                    # 学習済みモデル保存ディレクトリ
 │   └── YYYYMMDD/
 │       ├── model_weight_YYYYMMDD.tflite
